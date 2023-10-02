@@ -1,0 +1,82 @@
+﻿.help_content {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #d7d6d6
+}
+
+#help_panel {
+    position: fixed;
+    right: -330px;
+    width: 330px;
+    top: 70px;
+    padding-right: 10px;
+    border-radius: 5px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 999998;
+}
+
+    #help_panel.open {
+        right: -10px !important;
+    }
+
+    #help_panel > .header {
+        position: relative;
+        z-index: 100000;
+        line-height: 20px;
+        background: #444;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 600;
+        padding: 10px 20px;
+        margin: 0;
+    }
+
+    #help_panel > div {
+        position: relative;
+        z-index: 100000;
+    }
+
+#help_panel_toggler {
+    font-size: 21px;
+    width: 50px;
+    height: 40px;
+    padding-right: 10px;
+    position: absolute;
+    left: -40px;
+    top: 0;
+    background: #444;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    z-index: 99999;
+    text-decoration: none !important;
+    -webkit-transition: color .3s;
+    -moz-transition: color .3s;
+    -ms-transition: color .3s;
+    -o-transition: color .3s;
+    transition: color .3s;
+}
+
+#help_panel.open #help_panel_toggler {
+    font-size: 16px;
+    color: #888;
+}
+
+    #help_panel.open #help_panel_toggler:hover {
+        color: #fff;
+    }
+
+    #help_panel.open #help_panel_toggler:before {
+        content: "\f00d";
+    }

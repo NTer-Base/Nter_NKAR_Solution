@@ -1,0 +1,1120 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30480BFD-95AE-4DA9-B00F-67EEA0120B42}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>N_Ter_Tasks</RootNamespace>
+    <AssemblyName>N_Ter_Tasks</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44363</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v22.1.Web.WebForms, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v22.1.Core, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxDiagram.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxGantt.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxGauges.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxScheduler.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Office.v22.1.Core, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v22.1.Core, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Web.Bootstrap.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Resources.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v22.1.Web, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v22.1.Core, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Drawing.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v22.1.Web.WebForms, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v22.1.Web, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v22.1.Core.Desktop, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v22.1.Core, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.12.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.12.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=5.6.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.5.6.1\lib\net45\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Kentor.OwinCookieSaver, Version=1.1.1.0, Culture=neutral, PublicKeyToken=745693e36094f6a9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kentor.OwinCookieSaver-signed.1.1.1\lib\net452\Kentor.OwinCookieSaver.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.6.8.0\lib\net461\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.6.8.0\lib\net461\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.6.8.0\lib\net461\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.6.8.0\lib\net461\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.8.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.2.2\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.2.2\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.2.2\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.2.2\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OpenIdConnect, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OpenIdConnect.4.2.2\lib\net45\Microsoft.Owin.Security.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="N_Ter_AD_Authentication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\N_Ter_AD_Authentication.dll</HintPath>
+    </Reference>
+    <Reference Include="N_Ter_Task_Abstracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\N_Ter_Task_Abstracts.dll</HintPath>
+    </Reference>
+    <Reference Include="N_Ter_Task_Automations, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\N_Ter_Task_Automations.dll</HintPath>
+    </Reference>
+    <Reference Include="N_Ter_Task_Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\N_Ter_Task_Common.dll</HintPath>
+    </Reference>
+    <Reference Include="N_Ter_Task_Controllers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\N_Ter_Task_Controllers.dll</HintPath>
+    </Reference>
+    <Reference Include="N_Ter_Task_Custom">
+      <HintPath>..\N_Ter_Task_Data\N_Ter_Task_Custom\bin\Debug\N_Ter_Task_Custom.dll</HintPath>
+    </Reference>
+    <Reference Include="N_Ter_Task_Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\N_Ter_Task_Data.dll</HintPath>
+    </Reference>
+    <Reference Include="N_Ter_Task_Data_Structures, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\N_Ter_Task_Data_Structures.dll</HintPath>
+    </Reference>
+    <Reference Include="N_Ter_Task_Email_Receiver, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\N_Ter_Task_Email_Receiver.dll</HintPath>
+    </Reference>
+    <Reference Include="N_Ter_Task_License, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\N_Ter_Task_License.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.6.8.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.5.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="zxing, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net48\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net48\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="account_locked.aspx" />
+    <Content Include="calenders.aspx" />
+    <Content Include="calender_view.aspx" />
+    <Content Include="change_password.aspx" />
+    <Content Include="client_docs.aspx" />
+    <Content Include="controls_customizable\cuz_dashboard.ascx" />
+    <Content Include="controls_customizable\cuz_reports.ascx" />
+    <Content Include="controls_customizable\cuz_task_post.ascx" />
+    <Content Include="controls_customizable\intro_section_1.ascx" />
+    <Content Include="controls_customizable\intro_section_2.ascx" />
+    <Content Include="controls_customizable\nav_logo.ascx" />
+    <Content Include="dashboard_performance.aspx" />
+    <Content Include="dashboard_tasks.aspx" />
+    <Content Include="data_export.aspx" />
+    <Content Include="direct_db.aspx" />
+    <Content Include="document.aspx" />
+    <Content Include="document_preview.aspx" />
+    <Content Include="document_preview_dp.aspx" />
+    <Content Include="document_preview_temp.aspx" />
+    <Content Include="document_project.aspx" />
+    <Content Include="document_projects.aspx" />
+    <Content Include="doc_filter.aspx" />
+    <Content Include="doc_upload_external.aspx" />
+    <Content Include="dp_doc_templates.aspx" />
+    <Content Include="dp_list.aspx" />
+    <Content Include="dp_workflows.aspx" />
+    <Content Include="entity_level_1.aspx" />
+    <Content Include="entity_level_2.aspx" />
+    <Content Include="entity_level_2_inactive.aspx" />
+    <Content Include="error.aspx" />
+    <Content Include="extra_page_1.aspx" />
+    <Content Include="extra_page_2.aspx" />
+    <Content Include="fileupload.aspx" />
+    <Content Include="fileupload_nb.aspx" />
+    <Content Include="folder_read_rules.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="guest_error.aspx" />
+    <Content Include="guest_task_creation.aspx" />
+    <Content Include="guest_task_post.aspx" />
+    <Content Include="invalid_license.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="login_azure_ad.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="logout_azure_ad.aspx" />
+    <Content Include="mail_boxes.aspx" />
+    <Content Include="manage_tasks.aspx" />
+    <Content Include="messages.aspx" />
+    <Content Include="my_profile.aspx" />
+    <Content Include="my_tasks_overview.aspx" />
+    <Content Include="notice_board.aspx" />
+    <Content Include="no_access.aspx" />
+    <Content Include="periodical_tasks.aspx" />
+    <Content Include="read_email_rules.aspx" />
+    <Content Include="read_folders.aspx" />
+    <Content Include="receive_emails.aspx" />
+    <Content Include="reports.aspx" />
+    <Content Include="schedule.aspx" />
+    <Content Include="schedules.aspx" />
+    <Content Include="search.aspx" />
+    <Content Include="settings.aspx" />
+    <Content Include="subscription.aspx" />
+    <Content Include="summary_emails.aspx" />
+    <Content Include="task.aspx" />
+    <Content Include="task_analysis.aspx" />
+    <Content Include="task_bulk.aspx" />
+    <Content Include="task_info.aspx" />
+    <Content Include="task_list.aspx" />
+    <Content Include="task_list_alt.aspx" />
+    <Content Include="task_list_alt_2.aspx" />
+    <Content Include="task_list_inactive.aspx" />
+    <Content Include="task_list_inactive_alt.aspx" />
+    <Content Include="task_list_inactive_alt_2.aspx" />
+    <Content Include="task_list_timeline.aspx" />
+    <Content Include="task_list_timeline_alt.aspx" />
+    <Content Include="task_list_timeline_alt_2.aspx" />
+    <Content Include="task_queues.aspx" />
+    <Content Include="users.aspx" />
+    <Content Include="user_groups.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="welcome.aspx" />
+    <Content Include="wf_addons.aspx" />
+    <Content Include="wf_api_calls.aspx" />
+    <Content Include="wf_calenders.aspx" />
+    <Content Include="wf_categories.aspx" />
+    <Content Include="wf_doc_templates.aspx" />
+    <Content Include="wf_milestones.aspx" />
+    <Content Include="wf_repos.aspx" />
+    <Content Include="wf_schedules.aspx" />
+    <Content Include="wf_sub_workflow.aspx" />
+    <Content Include="workflow.aspx" />
+    <Content Include="workflows.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="account_locked.aspx.cs">
+      <DependentUpon>account_locked.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="account_locked.aspx.designer.cs">
+      <DependentUpon>account_locked.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="App_Start\StartupAuth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="calenders.aspx.cs">
+      <DependentUpon>calenders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="calenders.aspx.designer.cs">
+      <DependentUpon>calenders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="calender_view.aspx.cs">
+      <DependentUpon>calender_view.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="calender_view.aspx.designer.cs">
+      <DependentUpon>calender_view.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="change_password.aspx.cs">
+      <DependentUpon>change_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="change_password.aspx.designer.cs">
+      <DependentUpon>change_password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="client_docs.aspx.cs">
+      <DependentUpon>client_docs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client_docs.aspx.designer.cs">
+      <DependentUpon>client_docs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\CustomController.cs" />
+    <Compile Include="Controllers\TasksController.cs" />
+    <Compile Include="controls_customizable\cuz_dashboard.ascx.cs">
+      <DependentUpon>cuz_dashboard.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls_customizable\cuz_dashboard.ascx.designer.cs">
+      <DependentUpon>cuz_dashboard.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls_customizable\cuz_reports.ascx.cs">
+      <DependentUpon>cuz_reports.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls_customizable\cuz_reports.ascx.designer.cs">
+      <DependentUpon>cuz_reports.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls_customizable\cuz_task_post.ascx.cs">
+      <DependentUpon>cuz_task_post.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls_customizable\cuz_task_post.ascx.designer.cs">
+      <DependentUpon>cuz_task_post.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls_customizable\intro_section_1.ascx.cs">
+      <DependentUpon>intro_section_1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls_customizable\intro_section_1.ascx.designer.cs">
+      <DependentUpon>intro_section_1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls_customizable\intro_section_2.ascx.cs">
+      <DependentUpon>intro_section_2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls_customizable\intro_section_2.ascx.designer.cs">
+      <DependentUpon>intro_section_2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls_customizable\nav_logo.ascx.cs">
+      <DependentUpon>nav_logo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls_customizable\nav_logo.ascx.designer.cs">
+      <DependentUpon>nav_logo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard_performance.aspx.cs">
+      <DependentUpon>dashboard_performance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboard_performance.aspx.designer.cs">
+      <DependentUpon>dashboard_performance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard_tasks.aspx.cs">
+      <DependentUpon>dashboard_tasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboard_tasks.aspx.designer.cs">
+      <DependentUpon>dashboard_tasks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data_export.aspx.cs">
+      <DependentUpon>data_export.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data_export.aspx.designer.cs">
+      <DependentUpon>data_export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="direct_db.aspx.cs">
+      <DependentUpon>direct_db.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="direct_db.aspx.designer.cs">
+      <DependentUpon>direct_db.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="document.aspx.cs">
+      <DependentUpon>document.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="document.aspx.designer.cs">
+      <DependentUpon>document.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="document_preview.aspx.cs">
+      <DependentUpon>document_preview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="document_preview.aspx.designer.cs">
+      <DependentUpon>document_preview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="document_preview_dp.aspx.cs">
+      <DependentUpon>document_preview_dp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="document_preview_dp.aspx.designer.cs">
+      <DependentUpon>document_preview_dp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="document_preview_temp.aspx.cs">
+      <DependentUpon>document_preview_temp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="document_preview_temp.aspx.designer.cs">
+      <DependentUpon>document_preview_temp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="document_project.aspx.cs">
+      <DependentUpon>document_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="document_project.aspx.designer.cs">
+      <DependentUpon>document_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="document_projects.aspx.cs">
+      <DependentUpon>document_projects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="document_projects.aspx.designer.cs">
+      <DependentUpon>document_projects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doc_filter.aspx.cs">
+      <DependentUpon>doc_filter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doc_filter.aspx.designer.cs">
+      <DependentUpon>doc_filter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doc_upload_external.aspx.cs">
+      <DependentUpon>doc_upload_external.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doc_upload_external.aspx.designer.cs">
+      <DependentUpon>doc_upload_external.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dp_doc_templates.aspx.cs">
+      <DependentUpon>dp_doc_templates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dp_doc_templates.aspx.designer.cs">
+      <DependentUpon>dp_doc_templates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dp_list.aspx.cs">
+      <DependentUpon>dp_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dp_list.aspx.designer.cs">
+      <DependentUpon>dp_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dp_workflows.aspx.cs">
+      <DependentUpon>dp_workflows.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dp_workflows.aspx.designer.cs">
+      <DependentUpon>dp_workflows.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="entity_level_1.aspx.cs">
+      <DependentUpon>entity_level_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="entity_level_1.aspx.designer.cs">
+      <DependentUpon>entity_level_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="entity_level_2.aspx.cs">
+      <DependentUpon>entity_level_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="entity_level_2.aspx.designer.cs">
+      <DependentUpon>entity_level_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="entity_level_2_inactive.aspx.cs">
+      <DependentUpon>entity_level_2_inactive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="entity_level_2_inactive.aspx.designer.cs">
+      <DependentUpon>entity_level_2_inactive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="extra_page_1.aspx.cs">
+      <DependentUpon>extra_page_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="extra_page_1.aspx.designer.cs">
+      <DependentUpon>extra_page_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="extra_page_2.aspx.cs">
+      <DependentUpon>extra_page_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="extra_page_2.aspx.designer.cs">
+      <DependentUpon>extra_page_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fileupload.aspx.cs">
+      <DependentUpon>fileupload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fileupload.aspx.designer.cs">
+      <DependentUpon>fileupload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fileupload_nb.aspx.cs">
+      <DependentUpon>fileupload_nb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fileupload_nb.aspx.designer.cs">
+      <DependentUpon>fileupload_nb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="folder_read_rules.aspx.cs">
+      <DependentUpon>folder_read_rules.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="folder_read_rules.aspx.designer.cs">
+      <DependentUpon>folder_read_rules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="guest_error.aspx.cs">
+      <DependentUpon>guest_error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="guest_error.aspx.designer.cs">
+      <DependentUpon>guest_error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="guest_task_creation.aspx.cs">
+      <DependentUpon>guest_task_creation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="guest_task_creation.aspx.designer.cs">
+      <DependentUpon>guest_task_creation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="guest_task_post.aspx.cs">
+      <DependentUpon>guest_task_post.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="guest_task_post.aspx.designer.cs">
+      <DependentUpon>guest_task_post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="invalid_license.aspx.cs">
+      <DependentUpon>invalid_license.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="invalid_license.aspx.designer.cs">
+      <DependentUpon>invalid_license.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login_azure_ad.aspx.cs">
+      <DependentUpon>login_azure_ad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login_azure_ad.aspx.designer.cs">
+      <DependentUpon>login_azure_ad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout_azure_ad.aspx.cs">
+      <DependentUpon>logout_azure_ad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout_azure_ad.aspx.designer.cs">
+      <DependentUpon>logout_azure_ad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mail_boxes.aspx.cs">
+      <DependentUpon>mail_boxes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mail_boxes.aspx.designer.cs">
+      <DependentUpon>mail_boxes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage_tasks.aspx.cs">
+      <DependentUpon>manage_tasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage_tasks.aspx.designer.cs">
+      <DependentUpon>manage_tasks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="messages.aspx.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="messages.aspx.designer.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="my_profile.aspx.cs">
+      <DependentUpon>my_profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="my_profile.aspx.designer.cs">
+      <DependentUpon>my_profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="my_tasks_overview.aspx.cs">
+      <DependentUpon>my_tasks_overview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="my_tasks_overview.aspx.designer.cs">
+      <DependentUpon>my_tasks_overview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="notice_board.aspx.cs">
+      <DependentUpon>notice_board.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="notice_board.aspx.designer.cs">
+      <DependentUpon>notice_board.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="no_access.aspx.cs">
+      <DependentUpon>no_access.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="no_access.aspx.designer.cs">
+      <DependentUpon>no_access.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="n_ter_base.Master.cs">
+      <DependentUpon>n_ter_base.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="n_ter_base.Master.designer.cs">
+      <DependentUpon>n_ter_base.Master</DependentUpon>
+    </Compile>
+    <Compile Include="n_ter_base_guest.master.cs">
+      <DependentUpon>n_ter_base_guest.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="n_ter_base_guest.master.designer.cs">
+      <DependentUpon>n_ter_base_guest.master</DependentUpon>
+    </Compile>
+    <Compile Include="n_ter_base_loggedin.master.cs">
+      <DependentUpon>n_ter_base_loggedin.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="n_ter_base_loggedin.master.designer.cs">
+      <DependentUpon>n_ter_base_loggedin.master</DependentUpon>
+    </Compile>
+    <Compile Include="n_ter_base_loggedin_grid.master.cs">
+      <DependentUpon>n_ter_base_loggedin_grid.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="n_ter_base_loggedin_grid.master.designer.cs">
+      <DependentUpon>n_ter_base_loggedin_grid.master</DependentUpon>
+    </Compile>
+    <Compile Include="n_ter_base_loggedin_grid_dp.master.cs">
+      <DependentUpon>n_ter_base_loggedin_grid_dp.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="n_ter_base_loggedin_grid_dp.master.designer.cs">
+      <DependentUpon>n_ter_base_loggedin_grid_dp.master</DependentUpon>
+    </Compile>
+    <Compile Include="n_ter_base_loggedin_grid_task_list.master.cs">
+      <DependentUpon>n_ter_base_loggedin_grid_task_list.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="n_ter_base_loggedin_grid_task_list.master.designer.cs">
+      <DependentUpon>n_ter_base_loggedin_grid_task_list.master</DependentUpon>
+    </Compile>
+    <Compile Include="n_ter_base_loggedin_grid_task_list_t1.master.cs">
+      <DependentUpon>n_ter_base_loggedin_grid_task_list_t1.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="n_ter_base_loggedin_grid_task_list_t1.master.designer.cs">
+      <DependentUpon>n_ter_base_loggedin_grid_task_list_t1.master</DependentUpon>
+    </Compile>
+    <Compile Include="n_ter_base_loggedin_grid_task_list_t2.master.cs">
+      <DependentUpon>n_ter_base_loggedin_grid_task_list_t2.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="n_ter_base_loggedin_grid_task_list_t2.master.designer.cs">
+      <DependentUpon>n_ter_base_loggedin_grid_task_list_t2.master</DependentUpon>
+    </Compile>
+    <Compile Include="n_ter_base_loggedin_grid_task_list_t3.master.cs">
+      <DependentUpon>n_ter_base_loggedin_grid_task_list_t3.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="n_ter_base_loggedin_grid_task_list_t3.master.designer.cs">
+      <DependentUpon>n_ter_base_loggedin_grid_task_list_t3.master</DependentUpon>
+    </Compile>
+    <Compile Include="n_ter_base_loggedin_grid_wf.master.cs">
+      <DependentUpon>n_ter_base_loggedin_grid_wf.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="n_ter_base_loggedin_grid_wf.master.designer.cs">
+      <DependentUpon>n_ter_base_loggedin_grid_wf.master</DependentUpon>
+    </Compile>
+    <Compile Include="periodical_tasks.aspx.cs">
+      <DependentUpon>periodical_tasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="periodical_tasks.aspx.designer.cs">
+      <DependentUpon>periodical_tasks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="read_email_rules.aspx.cs">
+      <DependentUpon>read_email_rules.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="read_email_rules.aspx.designer.cs">
+      <DependentUpon>read_email_rules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="read_folders.aspx.cs">
+      <DependentUpon>read_folders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="read_folders.aspx.designer.cs">
+      <DependentUpon>read_folders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="receive_emails.aspx.cs">
+      <DependentUpon>receive_emails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="receive_emails.aspx.designer.cs">
+      <DependentUpon>receive_emails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reports.aspx.cs">
+      <DependentUpon>reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reports.aspx.designer.cs">
+      <DependentUpon>reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="schedule.aspx.cs">
+      <DependentUpon>schedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="schedule.aspx.designer.cs">
+      <DependentUpon>schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="schedules.aspx.cs">
+      <DependentUpon>schedules.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="schedules.aspx.designer.cs">
+      <DependentUpon>schedules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search.aspx.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search.aspx.designer.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="session_heartbeat.ashx.cs">
+      <DependentUpon>session_heartbeat.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="settings.aspx.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="settings.aspx.designer.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="subscription.aspx.cs">
+      <DependentUpon>subscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="subscription.aspx.designer.cs">
+      <DependentUpon>subscription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="summary_emails.aspx.cs">
+      <DependentUpon>summary_emails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="summary_emails.aspx.designer.cs">
+      <DependentUpon>summary_emails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task.aspx.cs">
+      <DependentUpon>task.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task.aspx.designer.cs">
+      <DependentUpon>task.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task_analysis.aspx.cs">
+      <DependentUpon>task_analysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task_analysis.aspx.designer.cs">
+      <DependentUpon>task_analysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task_bulk.aspx.cs">
+      <DependentUpon>task_bulk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task_bulk.aspx.designer.cs">
+      <DependentUpon>task_bulk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task_info.aspx.cs">
+      <DependentUpon>task_info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task_info.aspx.designer.cs">
+      <DependentUpon>task_info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task_list.aspx.cs">
+      <DependentUpon>task_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task_list.aspx.designer.cs">
+      <DependentUpon>task_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task_list_alt.aspx.cs">
+      <DependentUpon>task_list_alt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task_list_alt.aspx.designer.cs">
+      <DependentUpon>task_list_alt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task_list_alt_2.aspx.cs">
+      <DependentUpon>task_list_alt_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task_list_alt_2.aspx.designer.cs">
+      <DependentUpon>task_list_alt_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task_list_inactive.aspx.cs">
+      <DependentUpon>task_list_inactive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task_list_inactive.aspx.designer.cs">
+      <DependentUpon>task_list_inactive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task_list_inactive_alt.aspx.cs">
+      <DependentUpon>task_list_inactive_alt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task_list_inactive_alt.aspx.designer.cs">
+      <DependentUpon>task_list_inactive_alt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task_list_inactive_alt_2.aspx.cs">
+      <DependentUpon>task_list_inactive_alt_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task_list_inactive_alt_2.aspx.designer.cs">
+      <DependentUpon>task_list_inactive_alt_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task_list_timeline.aspx.cs">
+      <DependentUpon>task_list_timeline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task_list_timeline.aspx.designer.cs">
+      <DependentUpon>task_list_timeline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task_list_timeline_alt.aspx.cs">
+      <DependentUpon>task_list_timeline_alt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task_list_timeline_alt.aspx.designer.cs">
+      <DependentUpon>task_list_timeline_alt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task_list_timeline_alt_2.aspx.cs">
+      <DependentUpon>task_list_timeline_alt_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task_list_timeline_alt_2.aspx.designer.cs">
+      <DependentUpon>task_list_timeline_alt_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task_queues.aspx.cs">
+      <DependentUpon>task_queues.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task_queues.aspx.designer.cs">
+      <DependentUpon>task_queues.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users.aspx.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users.aspx.designer.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user_groups.aspx.cs">
+      <DependentUpon>user_groups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user_groups.aspx.designer.cs">
+      <DependentUpon>user_groups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="welcome.aspx.cs">
+      <DependentUpon>welcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="welcome.aspx.designer.cs">
+      <DependentUpon>welcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wf_addons.aspx.cs">
+      <DependentUpon>wf_addons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wf_addons.aspx.designer.cs">
+      <DependentUpon>wf_addons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wf_api_calls.aspx.cs">
+      <DependentUpon>wf_api_calls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wf_api_calls.aspx.designer.cs">
+      <DependentUpon>wf_api_calls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wf_calenders.aspx.cs">
+      <DependentUpon>wf_calenders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wf_calenders.aspx.designer.cs">
+      <DependentUpon>wf_calenders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wf_categories.aspx.cs">
+      <DependentUpon>wf_categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wf_categories.aspx.designer.cs">
+      <DependentUpon>wf_categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wf_doc_templates.aspx.cs">
+      <DependentUpon>wf_doc_templates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wf_doc_templates.aspx.designer.cs">
+      <DependentUpon>wf_doc_templates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wf_milestones.aspx.cs">
+      <DependentUpon>wf_milestones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wf_milestones.aspx.designer.cs">
+      <DependentUpon>wf_milestones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wf_repos.aspx.cs">
+      <DependentUpon>wf_repos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wf_repos.aspx.designer.cs">
+      <DependentUpon>wf_repos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wf_schedules.aspx.cs">
+      <DependentUpon>wf_schedules.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wf_schedules.aspx.designer.cs">
+      <DependentUpon>wf_schedules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wf_sub_workflow.aspx.cs">
+      <DependentUpon>wf_sub_workflow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wf_sub_workflow.aspx.designer.cs">
+      <DependentUpon>wf_sub_workflow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="workflow.aspx.cs">
+      <DependentUpon>workflow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="workflow.aspx.designer.cs">
+      <DependentUpon>workflow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="workflows.aspx.cs">
+      <DependentUpon>workflows.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="workflows.aspx.designer.cs">
+      <DependentUpon>workflows.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="License.mns" />
+    <Content Include="n_ter_base.Master" />
+    <Content Include="n_ter_base_guest.master" />
+    <Content Include="n_ter_base_loggedin.master" />
+    <Content Include="n_ter_base_loggedin_grid.master" />
+    <Content Include="n_ter_base_loggedin_grid_dp.master" />
+    <Content Include="n_ter_base_loggedin_grid_task_list.master" />
+    <Content Include="n_ter_base_loggedin_grid_task_list_t1.master" />
+    <Content Include="n_ter_base_loggedin_grid_task_list_t2.master" />
+    <Content Include="n_ter_base_loggedin_grid_task_list_t3.master" />
+    <Content Include="n_ter_base_loggedin_grid_wf.master" />
+    <None Include="packages.config" />
+    <Content Include="session_heartbeat.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="alert_sounds\" />
+    <Folder Include="App_Data\UploadTemp\" />
+    <Folder Include="assets\" />
+    <Folder Include="assets_customizable\" />
+    <Folder Include="client_folder_reads\" />
+    <Folder Include="FileManagerTemp\" />
+    <Folder Include="nter_app_uploads\" />
+    <Folder Include="Thumb\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49921</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44363/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

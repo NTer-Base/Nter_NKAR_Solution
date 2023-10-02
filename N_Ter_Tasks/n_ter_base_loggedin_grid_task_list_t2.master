@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/n_ter_base_loggedin_grid_task_list.master" AutoEventWireup="true" CodeBehind="n_ter_base_loggedin_grid_task_list_t2.master.cs" Inherits="N_Ter_Tasks.n_ter_base_loggedin_grid_task_list_t2" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="contTitle" runat="Server">
+    <asp:ContentPlaceHolder ID="contTitle" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contCSS" runat="Server">
+    <asp:ContentPlaceHolder ID="contCSS" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contHeader" runat="Server">
+    <asp:ContentPlaceHolder ID="contHeader" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="contBody" runat="Server">
+    <div class="row">
+        <div id="divNoTasks" runat="server" class="col-md-12">
+            <div class="alert alert-success">
+                <strong>Information !</strong> There are no Tasks available for you.
+            </div>
+        </div>
+    </div>
+    <div id="divCategories" runat="server">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="btn-group w100">
+                    <button type="button" class="btn btn-primary dropdown-toggle text-left w100" data-toggle="dropdown">
+                        Task Queue :
+                                    <asp:Literal ID="ltrSelectedQueue" runat="server"></asp:Literal>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down pull-right pt3"></i></button>
+                    <ul class="dropdown-menu dropdown-menu-right w100">
+                        <asp:Literal ID="ltrOtherQueues" runat="server"></asp:Literal>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="btn-group w100">
+                    <button type="button" class="btn btn-primary dropdown-toggle text-left w100" data-toggle="dropdown">
+                        Workflow Category :
+                                    <asp:Literal ID="ltrSelectedCategory" runat="server"></asp:Literal>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down pull-right pt3"></i></button>
+                    <ul class="dropdown-menu dropdown-menu-right w100">
+                        <asp:Literal ID="ltrOtherCategories" runat="server"></asp:Literal>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="divTasks" runat="server" class="mt20">
+        <asp:ContentPlaceHolder ID="contBody" runat="server"></asp:ContentPlaceHolder>
+    </div>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="contScripts" runat="Server">
+    <script type="text/javascript">
+        init.push(function () {
+            ArrangeGrids();
+            setInterval(function () {
+                LoadCounts();
+            }, <%=RefreshFreq%>);
+        });
+
+        function LoadCounts() {
+            var TabCount = <%=TabCountScript%>;
+            var SelectedQueue = <%=SelectedQueueScript%>;
+            var SelectedCat = <%=SelectedCatScript%>;
+            if (TabCount > 0) {
+                $.ajax({
+                    type: "GET",
+                    url: "api/tasks/GetCatTaskCounts",
+                    data: { Queue_ID: SelectedQueue, Cat_ID: SelectedCat, T_Type: <%=(isActive ? "1" : "0")%> },
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        if (JSON.stringify(result) != "") {
+                            var resultObject = result;
+                            var queueResult = resultObject[0].Queues;
+                            for (var i = 0; i < queueResult.length; i++) {
+                                $("#" + queueResult[i].Item_ID).html(queueResult[i].Item_Name);
+                            }
+                            var catResult = resultObject[0].Cats;
+                            for (var i = 0; i < catResult.length; i++) {
+                                $("#" + catResult[i].Item_ID).html(catResult[i].Item_Name);
+                            }
+                            var wfResult = resultObject[0].Workflows;
+                            for (var i = 0; i < wfResult.length; i++) {
+                                $("#" + wfResult[i].Item_ID).html(wfResult[i].Item_Name);
+                            }
+                            if (TabCount != Number(resultObject[0].NoOfTabs)) {
+                                ShowWarning('Please Refresh the Page to Load Additional Workflows')
+                            }
+                        }
+                    },
+                    failure: function (data) { }
+                });
+            }
+        }
+
+        function ArrangeGrids() {
+            $.fn.dataTable.ext.errMode = 'none';
+
+            <%=TableScript%>
+
+            $('.nav-tabs-simple').tabdrop();
+
+            $(".dataTables_filter").children().children('input').attr('placeholder', 'Search...');
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="contScripts" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

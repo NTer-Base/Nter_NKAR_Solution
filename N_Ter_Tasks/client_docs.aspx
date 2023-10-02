@@ -1,0 +1,111 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/n_ter_base_loggedin_grid.master" AutoEventWireup="true" CodeBehind="client_docs.aspx.cs" Inherits="N_Ter_Tasks.client_docs" %>
+
+<%@ Register Assembly="DevExpress.Web.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<%@ Register TagPrefix="asp" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="contTitle" runat="Server">
+    N-Test-Tasks > <asp:Literal ID="ltrEL2_3" runat="server"></asp:Literal> Documents
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contCSS" runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contHeader" runat="Server">
+    <asp:Literal ID="ltrEL2_4" runat="server"></asp:Literal> Documents <asp:Label ID="lblEL2Name" runat="server" Text=""></asp:Label>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="contBody" runat="Server">
+    <div class="row">
+        <div class="col-lg-12" style="height: 40px">
+            <div class="pull-right">
+                <button id="cmdChangeClient" runat="server" class="btn btn-labeled btn-primary"><span class="btn-label icon fa fa-eye"></span>Select <asp:Literal ID="ltrEL2" runat="server"></asp:Literal></button>
+                <asp:ModalPopupExtender ID="cmdChangeClient_ModalPopupExtender" runat="server" Enabled="True" BehaviorID="mpuSelectClient" PopupControlID="pnlSelectClient" TargetControlID="cmdChangeClient" CancelControlID="cmdCloseClient" BackgroundCssClass="at_modelpopup_background">
+                </asp:ModalPopupExtender>
+            </div>
+        </div>
+        <div id="divFileManager" runat="server" class="col-lg-12">
+            <dx:ASPxFileManager ID="fileManagerClients" runat="server" Theme="Metropolis" Height="500px">
+                <Settings RootFolder="~\nter_app_uploads\client_docs" ThumbnailFolder="~\Thumb\" EnableMultiSelect="True" />
+                <SettingsFileList View="Details">
+                </SettingsFileList>
+                <SettingsEditing AllowCreate="True" AllowDelete="True" AllowMove="True" AllowRename="True" AllowDownload="true" />
+                <SettingsToolbar ShowFilterBox="False" ShowPath="False" />
+                <SettingsUpload UseAdvancedUploadMode="True">
+                    <AdvancedModeSettings EnableMultiSelect="True" />
+                </SettingsUpload>
+            </dx:ASPxFileManager>
+        </div>
+    </div>
+    <asp:Panel ID="pnlSelectClient" runat="server" CssClass="at_modelpopup_container" Style="display: none">
+        <div id="at_model_indent" class="at_modelpopup_indent">
+            <div id="at_model_inner_indent" class="panel panel-inverse at_modelpopup_inner_indent">
+                <div class="panel-heading">
+                    <div class="at_modelpopup_add">
+                        <asp:Button ID="cmdCloseClient" runat="server" Text="&times;" class="btn btn-default" />
+                    </div>
+                    <h4 class="panel-title">Select <asp:Literal ID="ltrEL2_2" runat="server"></asp:Literal></h4>
+                </div>
+                <div id="at_model_content" class="at_modelpopup_content styled-bar">
+                    <div class="panel-body">
+                        <div class="table-responsive table-primary no-margin-b">
+                            <asp:GridView ID="gvEL2Select" runat="server" ClientIDMode="Static" CssClass="table table-striped table-hover grid_table grid_el2s" AutoGenerateColumns="False" OnRowDataBound="gvEL2Select_RowDataBound">
+                                <Columns>
+                                    <asp:BoundField DataField="Entity_L2_ID" />
+                                    <asp:TemplateField>
+                                        <ItemTemplate>
+                                            <button id='cmdEdit' type='submit' runat="server" class="btn btn-primary btn-xs" title="Select Entity"><span class="fa fa-eye button_icon"></span></button>
+                                        </ItemTemplate>
+                                        <ItemStyle Width="22px" />
+                                    </asp:TemplateField>
+                                    <asp:BoundField DataField="Display_Name" HeaderText="Entity Name" />
+                                </Columns>
+                                <PagerStyle HorizontalAlign="Right" />
+                            </asp:GridView>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </asp:Panel>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="contScripts" runat="Server">
+    <script type="text/javascript">
+        $(function () {
+            $(window).resize(function () {
+                AdjustPopupSize(80, 800, 'at_model');
+            });
+        });
+
+        init.push(function () {
+            AdjustPopupSize(80, 800, 'at_model');
+            <%=Loading_Script%>
+
+            ArrangeGrids();
+        });
+
+        function showClientSelect() {
+            $find('mpuSelectClient').show();
+            focusSearch();
+            return false;
+        }
+
+        function focusSearch() {
+            $('#gvEL2Select_filter').children('label').children('input').focus();
+        }
+
+        function ArrangeGrids() {
+            $('.grid_el2s').dataTable({
+                "pageLength": 50,
+                "order": [[1, 'asc']],
+                "responsive": true,
+                "autoWidth": true,
+                "columnDefs": [
+                       { 'orderable': false, targets: 0 }
+                ],
+                "fnDrawCallback": function (oSettings, json) {
+                    AdjustGridResp();
+                }
+            });
+
+            $(".dataTables_filter").children().children('input').attr('placeholder', 'Search...');
+        }
+    </script>
+</asp:Content>

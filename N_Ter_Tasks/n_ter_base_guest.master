@@ -1,0 +1,21 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/n_ter_base.Master" AutoEventWireup="true" CodeBehind="n_ter_base_guest.master.cs" Inherits="N_Ter_Tasks.n_ter_base_guest" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="contTitle" runat="Server">
+    <asp:ContentPlaceHolder ID="contTitle" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contCSS" runat="Server">
+    <link href="assets/stylesheets/guests.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="contCSS" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contBody" runat="Server">
+    <div class="container-fluid">
+        <asp:Literal ID="ltrHeader" runat="server"></asp:Literal>
+        <div class="mt25">
+            <asp:ContentPlaceHolder ID="contBody" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <asp:Literal ID="ltrFooter" runat="server"></asp:Literal>
+    </div>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="contScripts" runat="Server">
+    <asp:ContentPlaceHolder ID="contScripts" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

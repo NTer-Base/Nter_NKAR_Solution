@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/n_ter_base_loggedin_grid.master" AutoEventWireup="true" CodeBehind="n_ter_base_loggedin_grid_wf.master.cs" Inherits="N_Ter_Tasks.n_ter_base_loggedin_grid_wf" %>
+
+<%@ Register TagPrefix="asp" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="contTitle" runat="Server">
+    <asp:ContentPlaceHolder ID="contTitle" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contCSS" runat="Server">
+    <asp:ContentPlaceHolder ID="contCSS" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contHeader" runat="Server">
+    <asp:ContentPlaceHolder ID="contHeader" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="contBody" runat="Server">
+    <div style="margin: -18px -20px; min-height: 500px">
+        <div style="padding: 18px 20px 18px 20px; background-color: #f6f6f6">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="btn-group w100">
+                        <button type="button" class="btn btn-primary dropdown-toggle text-left w100" data-toggle="dropdown">
+                            Workflow Category :
+                                    <asp:Literal ID="ltrSelectedCategory" runat="server"></asp:Literal>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down pull-right pt3"></i></button>
+                        <ul class="dropdown-menu dropdown-menu-right w100">
+                            <asp:Literal ID="ltrOtherCategories" runat="server"></asp:Literal>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <table class="w100">
+                        <tr>
+                            <td>
+                                <div class="btn-group w100">
+                                    <button type="button" class="btn btn-primary dropdown-toggle text-left w100" data-toggle="dropdown">
+                                        Workflow :
+                                    <asp:Literal ID="ltrSelectedWorkflow" runat="server"></asp:Literal>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down pull-right pt3"></i></button>
+                                    <ul class="dropdown-menu dropdown-menu-right w100">
+                                        <asp:Literal ID="ltrOtherWorkflows" runat="server"></asp:Literal>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="wf_options">
+                                <asp:Literal ID="ltrActionMenu" runat="server"></asp:Literal>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div style="margin: 18px 20px">
+            <asp:ContentPlaceHolder ID="contBody" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <asp:HiddenField ID="hndDuplicate" runat="server" />
+    <asp:ModalPopupExtender ID="chndDuplicate_ModalPopupExtender" runat="server" Enabled="True" BehaviorID="mpuDuplicate" PopupControlID="pnlDuplicate" TargetControlID="hndDuplicate" CancelControlID="cmdCancelDuplicate" BackgroundCssClass="at_modelpopup_background">
+    </asp:ModalPopupExtender>
+    <asp:Panel ID="pnlDuplicate" runat="server" CssClass="at_modelpopup_container" Style="display: none">
+        <div id="at_model_mas_dup_indent" class="at_modelpopup_indent">
+            <div id="at_model_mas_dup_inner_indent" class="panel panel-inverse at_modelpopup_inner_indent">
+                <div class="panel-heading">
+                    <div class="at_modelpopup_add">
+                        <asp:Button ID="cmdCancelDuplicate" runat="server" Text="&times;" CssClass="btn btn-default" />
+                    </div>
+                    <h4 class="panel-title">Duplicate Workflow</h4>
+                </div>
+                <div id="at_model_mas_dup_content" class="at_modelpopup_content styled-bar">
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label>Workflow to Duplicate</label>
+                            <asp:TextBox ID="txtCurrentWorkflow" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <label>New Workflow Name</label>
+                            <asp:TextBox ID="txtNewWorkflowName" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <asp:Button ID="cmdCreateDuplicate" runat="server" Text="Create Duplicate Workflow" CssClass="btn btn-primary" OnClick="cmdCreateDuplicate_Click" />
+                </div>
+            </div>
+        </div>
+    </asp:Panel>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="contScripts" runat="Server">
+    <script type="text/javascript">
+        $(function () {
+            $(window).resize(function () {
+                AdjustPopupSize(167, 800, 'at_model_mas_dup');
+            });
+        });
+
+        init.push(function () {
+            AdjustPopupSize(167, 800, 'at_model_mas_dup');
+        });
+
+        function duplicateWorkflow(c_wf_id, c_workflow) {
+            $('#<%=hndDuplicate.ClientID%>').val(c_wf_id);
+            $('#<%=txtCurrentWorkflow.ClientID%>').val(c_workflow);
+            $('#<%=txtNewWorkflowName.ClientID%>').val('');
+            $find("mpuDuplicate").show();
+            return false;
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="contScripts" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

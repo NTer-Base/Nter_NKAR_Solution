@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/n_ter_base_loggedin.master" AutoEventWireup="true" CodeBehind="n_ter_base_loggedin_grid.master.cs" Inherits="N_Ter_Tasks.n_ter_base_loggedin_grid" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="contTitle" Runat="Server">
+    <asp:ContentPlaceHolder ID="contTitle" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contCSS" Runat="Server">
+    <asp:ContentPlaceHolder ID="contCSS" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contHeader" Runat="Server">
+    <asp:ContentPlaceHolder ID="contHeader" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="contBody" Runat="Server">
+    <asp:ContentPlaceHolder ID="contBody" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="contScripts" Runat="Server">
+    <script src="assets/javascripts/tables-sorting.min.js"></script>
+    <asp:ContentPlaceHolder ID="contScripts" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

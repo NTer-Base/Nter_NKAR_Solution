@@ -1,0 +1,860 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/n_ter_base.Master" AutoEventWireup="true" CodeBehind="n_ter_base_loggedin.master.cs" Inherits="N_Ter_Tasks.n_ter_base_loggedin" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<%@ Register Src="~/controls_customizable/nav_logo.ascx" TagPrefix="ucLogo" TagName="nterLogo" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="contTitle" runat="Server">
+    <asp:ContentPlaceHolder ID="contTitle" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contCSS" runat="Server">
+    <link href="assets/stylesheets/widgets.min.css" rel="stylesheet" />
+    <link href="assets/stylesheets/floating-buttons.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="contCSS" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contBody" runat="Server">
+    <asp:Button ID="cmdDefaultEnter" runat="server" Text="Button" CssClass="hide" OnClientClick="return false" />
+    <div id="main-wrapper">
+        <div id="main-navbar" class="navbar navbar-inverse" role="navigation">
+            <button type="button" id="main-menu-toggle"><i class="navbar-icon fa fa-bars icon"></i><span class="hide-menu-text">HIDE MENU</span></button>
+            <div class="navbar-inner">
+                <div class="navbar-header">
+                    <a href="dashboard_tasks.aspx" class="navbar-brand">
+                        <ucLogo:nterLogo runat="server" ID="logo" />
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse"><i class="navbar-icon fa fa-bars"></i></button>
+                </div>
+                <div id="main-navbar-collapse" class="collapse navbar-collapse main-navbar-collapse">
+                    <div>
+                        <div class="right clearfix">
+                            <ul class="nav navbar-nav pull-right right-navbar-nav">
+                                <li class="nav-icon-btn nav-icon-btn-primary dropdown" title="Welcome Screen">
+                                    <a href="welcome.aspx?" class="dropdown-toggle">
+                                        <i class="nav-icon fa fa-beer"></i>
+                                        <span class="small-screen-text">Welcome Screen</span>
+                                    </a>
+                                </li>
+                                <li class="nav-icon-btn nav-icon-btn-primary dropdown" title="Notice Board">
+                                    <a href="notice_board.aspx?" class="dropdown-toggle">
+                                        <span id="masterNBCount" class="label">
+                                            <asp:Literal ID="ltrNBCount" runat="server"></asp:Literal></span>
+                                        <i class="nav-icon fa fa-bullhorn"></i>
+                                        <span class="small-screen-text">Notice Board</span>
+                                    </a>
+                                </li>
+                                <li class="nav-icon-btn nav-icon-btn-danger dropdown" title="Alerts">
+                                    <a href="#notifications" class="dropdown-toggle" data-toggle="dropdown">
+                                        <span id="masterTaskCount" class="label">
+                                            <asp:Literal ID="ltrNotificationCount" runat="server"></asp:Literal></span>
+                                        <i class="nav-icon fa fa-bell"></i>
+                                        <span class="small-screen-text">Alerts</span>
+                                    </a>
+                                    <script>
+                                        init.push(function () {
+                                            $('#main-navbar-notifications').slimScroll({ height: 250 });
+                                        });
+                                    </script>
+                                    <div class="dropdown-menu widget-notifications no-padding" style="width: 300px">
+                                        <div class="notifications-list" id="main-navbar-notifications">
+                                            <asp:Literal ID="ltrAlerts" runat="server"></asp:Literal>
+                                        </div>
+                                        <a href="task_list.aspx?" class="notifications-link">Check All</a>
+                                    </div>
+                                </li>
+                                <li class="nav-icon-btn nav-icon-btn-success dropdown" title="Messages">
+                                    <a href="#messages" class="dropdown-toggle" data-toggle="dropdown">
+                                        <span id="masterMsgCount" class="label">
+                                            <asp:Literal ID="ltrMessageCount" runat="server"></asp:Literal></span>
+                                        <i class="nav-icon fa fa-envelope"></i>
+                                        <span class="small-screen-text">Messages</span>
+                                    </a>
+                                    <script>
+                                        init.push(function () {
+                                            $('#main-navbar-messages').slimScroll({ height: 250 });
+                                        });
+                                    </script>
+                                    <div class="dropdown-menu widget-messages-alt no-padding" style="width: 300px;">
+                                        <div class="messages-list" id="main-navbar-messages">
+                                            <asp:Literal ID="ltrMessages" runat="server"></asp:Literal>
+                                        </div>
+                                        <a href="messages.aspx?" class="messages-link">Check All</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <asp:Panel ID="divSearch" runat="server" ClientIDMode="Static" CssClass="navbar-form pull-left">
+                                        <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control" placeholder="Search"></asp:TextBox>
+                                        <asp:Button ID="cmdSearch" runat="server" Text="Button" CssClass="hide" OnClick="cmdSearch_Click" />
+                                    </asp:Panel>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle user-menu" data-toggle="dropdown">
+                                        <asp:Image ID="imgUserImage" runat="server" />
+                                        <span>
+                                            <asp:Literal ID="ltrUserName" runat="server"></asp:Literal></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="my_profile.aspx?"><i class="user_manu_icon dropdown-icon fa fa-user"></i>&nbsp;&nbsp;Profile</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="messages.aspx?"><i class="user_manu_icon dropdown-icon fa fa-envelope"></i>&nbsp;&nbsp;Messages</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="logout.aspx?"><i class="user_manu_icon dropdown-icon fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main-menu" role="navigation">
+            <div id="main-menu-inner">
+                <div class="menu-content top" id="menu-content-demo">
+                    <div>
+                        <div class="text-bg"><span class="text-semibold">Navigation</span></div>
+                    </div>
+                </div>
+                <ul class="navigation">
+                    <asp:Literal ID="ltrMenu" runat="server"></asp:Literal>
+                </ul>
+                <ul id="ulNav2" runat="server" class="navigation" style="padding-top: 20px">
+                    <asp:Literal ID="ltrMenu2" runat="server"></asp:Literal>
+                </ul>
+            </div>
+        </div>
+        <div id="content-wrapper">
+            <div class="page-header">
+                <div class="row">
+                    <h1 class="col-xs-12 text-left-sm">
+                        <asp:ContentPlaceHolder ID="contHeader" runat="server"></asp:ContentPlaceHolder>
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <asp:ContentPlaceHolder ID="contBody" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <div id="main-menu-bg"></div>
+    </div>
+    <div class="floating-container">
+        <div id="divAddTasks" runat="server" class="qa-action-button qa-action-button-sp btn-success">
+            <span class="qa-action-button-select" onclick="return MasterClearControls();"><i class="fa fa-plus"></i></span>
+            <p class="quick-access-tooltip"><span class="quick-access-tooltip-bg">Add Task</span></p>
+        </div>
+        <div class="qa-action-button btn-warning">
+            <span class="qa-action-button-select" onclick="return PauseAll();"><i class="fa fa-pause"></i></span>
+            <p class="quick-access-tooltip"><span class="quick-access-tooltip-bg">Pause Tasks</span></p>
+        </div>
+        <div class="qa-action-button btn-primary" style="padding: 7px 8px">
+            <span class="qa-action-button-select" onclick="return OpenWelcome();"><i class="fa fa-beer"></i></span>
+            <p class="quick-access-tooltip"><span class="quick-access-tooltip-bg">Welcome Screen</span></p>
+        </div>
+        <div class="quick-access btn-danger"><span><i class="fa fa-asterisk"></i></span></div>
+    </div>
+    <button id="cmdAutoLogoutHidden" runat="server" style="display: none;"></button>
+    <asp:ModalPopupExtender ID="cmdAutoLogoutHidden_ModalPopupExtender" runat="server" Enabled="True" PopupControlID="pnlAutoLogout" BehaviorID="mpuAutoLogout" TargetControlID="cmdAutoLogoutHidden" CancelControlID="cmdCancel_Logout" BackgroundCssClass="at_modelpopup_background_2">
+    </asp:ModalPopupExtender>
+    <asp:Panel ID="pnlAutoLogout" runat="server" CssClass="at_modelpopup_container" Style="display: none">
+        <div id="at_lg_model_indent" class="at_modelpopup_indent">
+            <div id="at_lg_model_inner_indent" class="panel panel-inverse at_modelpopup_inner_indent">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Logout Confirmation</h4>
+                </div>
+                <div id="at_lg_model_content" class="at_modelpopup_content styled-bar">
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <span>
+                                <asp:Label ID="lblmesage" runat="server"></asp:Label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <asp:Button ID="cmdLogout_Confirm" runat="server" Text="Yes" CssClass="btn btn-primary" OnClick="cmdLogout_Confirm_Click" />
+                    <asp:Button ID="cmdCancel_Logout" runat="server" Text="No" CssClass="btn btn-default" OnClientClick="noLogout();" />
+                </div>
+            </div>
+        </div>
+    </asp:Panel>
+    <asp:HiddenField ID="hndPauseAll" runat="server" />
+    <asp:ModalPopupExtender ID="hndPauseAll_ModalPopupExtender" runat="server" Enabled="True" PopupControlID="pnlPauseAll" BehaviorID="mpuPauseAll" TargetControlID="hndPauseAll" CancelControlID="cmdCancelPauseAll" BackgroundCssClass="at_modelpopup_background">
+    </asp:ModalPopupExtender>
+    <asp:Panel ID="pnlPauseAll" runat="server" CssClass="at_modelpopup_container" Style="display: none">
+        <div id="at_pa_model_indent" class="at_modelpopup_indent">
+            <div id="at_pa_model_inner_indent" class="panel panel-inverse at_modelpopup_inner_indent">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Pause Tasks ?</h4>
+                </div>
+                <div id="at_pa_model_content" class="at_modelpopup_content styled-bar">
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <span>You have <b><span id="pauseCount"></span>Task(s)</b> Opened by You<br />
+                                <span id="noPauseCount">Click <b>Yes</b> to <b>Pause </b>all Opened Tasks</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <asp:Button ID="cmdPauseAll" runat="server" Text="Yes" CssClass="btn btn-primary" OnClientClick="return doPauseAll();" />
+                    <asp:Button ID="cmdCancelPauseAll" runat="server" Text="No" CssClass="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </asp:Panel>
+    <asp:HiddenField ID="hndMasterNewTask" runat="server" />
+    <asp:ModalPopupExtender ID="hndMasterNewTask_ModalPopupExtender" runat="server" Enabled="True" BehaviorID="mpuMasterNewTask" PopupControlID="pnlMasterNewTask" TargetControlID="hndMasterNewTask" CancelControlID="cmdCloseMasterNewTask" BackgroundCssClass="at_modelpopup_background_2">
+    </asp:ModalPopupExtender>
+    <asp:Panel ID="pnlMasterNewTask" runat="server" CssClass="at_modelpopup_container" Style="display: none">
+        <div id="at_model_start_task_indent" class="at_modelpopup_indent">
+            <div id="at_model_start_task_inner_indent" class="panel panel-inverse at_modelpopup_inner_indent">
+                <div class="panel-heading">
+                    <div class="at_modelpopup_add">
+                        <asp:Button ID="cmdCloseMasterNewTask" runat="server" Text="&times;" class="btn btn-default" />
+                    </div>
+                    <h4 class="panel-title">Start New Task</h4>
+                </div>
+                <div id="at_model_start_task_content" class="at_modelpopup_content styled-bar">
+                    <div class="panel-body">
+                        <asp:HiddenField ID="hndMasterDeadlineType" runat="server" />
+                        <div class="form-group">
+                            <label>Workflow Category</label>
+                            <asp:DropDownList runat="server" CssClass="form-control" ID="cboMasterWorkflowCategory"></asp:DropDownList>
+                        </div>
+                        <div class="form-group">
+                            <label>Workflow</label>
+                            <select id="MasterWorkflowList" class="form-control" onchange="SaveMasterWorkflowLine();"></select>
+                            <asp:HiddenField ID="hndMasterWorkflowID" runat="server" />
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <asp:Literal ID="ltrMasterEL2" runat="server"></asp:Literal></label>
+                            <select id="MasterEl2List" class="form-control" onchange="SaveMasterEL2();"></select>
+                            <asp:HiddenField ID="hndMasterEL2" runat="server" />
+                        </div>
+                        <div id="divMasterExtraField1" class="form-group hide">
+                            <label id="lblMasterExtraField1"></label>
+                            <asp:TextBox ID="txtMasterExtraField1" runat="server" CssClass="form-control"></asp:TextBox>
+                            <select id="MasterExSelection1" class="form-control" onchange="SaveMasterExtraField1();"></select>
+                        </div>
+                        <div id="divMasterExtraField2" class="form-group hide">
+                            <label id="lblMasterExtraField2"></label>
+                            <asp:TextBox ID="txtMasterExtraField2" runat="server" CssClass="form-control"></asp:TextBox>
+                            <select id="MasterExSelection2" class="form-control" onchange="SaveMasterExtraField2();"></select>
+                        </div>
+                        <div id="divMasterAssignTo" class="form-group hide">
+                            <label>Assign the Task to</label>
+                            <select id="MasterSubordinatesList" class="form-control" onchange="SaveMasterSubordinate();"></select>
+                            <asp:HiddenField ID="hndMasterSubordinateID" runat="server" />
+                        </div>
+                        <div id="divMasterSchedule" class="form-group hide">
+                            <label id="MasterScheduleName"></label>
+                            <select id="MasterSchedulesList" class="form-control" onchange="SaveMasterScheduleLine();"></select>
+                            <asp:HiddenField ID="hndMasterScheduleElementID" runat="server" />
+                        </div>
+                        <div id="divMasterDueDate" class="form-group">
+                            <label>Due Date : </label>
+                            <asp:TextBox ID="txtMasterDueDate" runat="server" CssClass="form-control dtPicker"></asp:TextBox>
+                        </div>
+                        <div id="divMasterDueTime" class="form-group">
+                            <label>Due Time : </label>
+                            <asp:DropDownList ID="cboMasterDueTime" runat="server" class="form-control">
+                                <asp:ListItem Value="00">00:00</asp:ListItem>
+                                <asp:ListItem Value="01">00:30</asp:ListItem>
+                                <asp:ListItem Value="10">01:00</asp:ListItem>
+                                <asp:ListItem Value="11">01:30</asp:ListItem>
+                                <asp:ListItem Value="20">02:00</asp:ListItem>
+                                <asp:ListItem Value="21">02:30</asp:ListItem>
+                                <asp:ListItem Value="30">03:00</asp:ListItem>
+                                <asp:ListItem Value="31">03:30</asp:ListItem>
+                                <asp:ListItem Value="40">04:00</asp:ListItem>
+                                <asp:ListItem Value="41">04:30</asp:ListItem>
+                                <asp:ListItem Value="50">05:00</asp:ListItem>
+                                <asp:ListItem Value="51">05:30</asp:ListItem>
+                                <asp:ListItem Value="60">06:00</asp:ListItem>
+                                <asp:ListItem Value="61">06:30</asp:ListItem>
+                                <asp:ListItem Value="70">07:00</asp:ListItem>
+                                <asp:ListItem Value="71">07:30</asp:ListItem>
+                                <asp:ListItem Value="80">08:00</asp:ListItem>
+                                <asp:ListItem Value="81">08:30</asp:ListItem>
+                                <asp:ListItem Value="90">09:00</asp:ListItem>
+                                <asp:ListItem Value="91">09:30</asp:ListItem>
+                                <asp:ListItem Value="100">10:00</asp:ListItem>
+                                <asp:ListItem Value="101">10:30</asp:ListItem>
+                                <asp:ListItem Value="110">11:00</asp:ListItem>
+                                <asp:ListItem Value="111">11:30</asp:ListItem>
+                                <asp:ListItem Value="120">12:00</asp:ListItem>
+                                <asp:ListItem Value="121">12:30</asp:ListItem>
+                                <asp:ListItem Value="130">13:00</asp:ListItem>
+                                <asp:ListItem Value="131">13:30</asp:ListItem>
+                                <asp:ListItem Value="140">14:00</asp:ListItem>
+                                <asp:ListItem Value="141">14:30</asp:ListItem>
+                                <asp:ListItem Value="150">15:00</asp:ListItem>
+                                <asp:ListItem Value="151">15:30</asp:ListItem>
+                                <asp:ListItem Value="160">16:00</asp:ListItem>
+                                <asp:ListItem Value="161">16:30</asp:ListItem>
+                                <asp:ListItem Value="170">17:00</asp:ListItem>
+                                <asp:ListItem Value="171">17:30</asp:ListItem>
+                                <asp:ListItem Value="180">18:00</asp:ListItem>
+                                <asp:ListItem Value="181">18:30</asp:ListItem>
+                                <asp:ListItem Value="190">19:00</asp:ListItem>
+                                <asp:ListItem Value="191">19:30</asp:ListItem>
+                                <asp:ListItem Value="200">20:00</asp:ListItem>
+                                <asp:ListItem Value="201">20:30</asp:ListItem>
+                                <asp:ListItem Value="210">21:00</asp:ListItem>
+                                <asp:ListItem Value="211">21:30</asp:ListItem>
+                                <asp:ListItem Value="220">22:00</asp:ListItem>
+                                <asp:ListItem Value="221">22:30</asp:ListItem>
+                                <asp:ListItem Value="230">23:00</asp:ListItem>
+                                <asp:ListItem Value="231">23:30</asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+                        <div class="form-group">
+                            <label>Task Queue</label>
+                            <asp:DropDownList runat="server" CssClass="form-control" ID="cboMasterQueue"></asp:DropDownList>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <asp:Button ID="cmdMasterStartTask" runat="server" CssClass="btn btn-primary pull-right" Text="Start Task" OnClick="cmdMasterStartTask_Click" />
+                </div>
+            </div>
+        </div>
+    </asp:Panel>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="contScripts" runat="Server">
+    <audio id="alert_sound" src="alert_sounds/sound.wav" preload="auto" style="display: none"></audio>
+    <script src="assets/javascripts/floating-buttons.min.js"></script>
+    <script>
+        init.push(function () {
+            window.onbeforeunload = DisableLink;
+            ArrangeMasterPopups();
+            setInterval(function () {
+                LoadMasterCounts();
+            }, <%=RefreshFreq%>);
+            setInterval(function () {
+                heartbeat();
+                <%=AlertsScript%>
+                <%=HourlyAlertsScript%>
+            }, <%=RefreshFreq%>);
+        });
+
+        function heartbeat() {
+            $.get("/session_heartbeat.ashx");
+        }
+
+        $(function () {
+            $(window).resize(function () {
+                ArrangeMasterPopups();
+            });
+        });
+
+        function ArrangeMasterPopups() {
+            AdjustPopupSize(180, 500, 'at_lg_model');
+            AdjustPopupSize(50, 400, 'at_pa_model');
+            AdjustPopupSize(80, 600, 'at_model_start_task');
+        }
+
+        function DisableLink() {
+            document.getElementById("<%=cmdMasterStartTask.ClientID%>").disabled = true;
+        }
+
+        function LoadMasterCounts() {
+            $.ajax({
+                type: "GET",
+                url: "api/tasks/GetTaskCounts",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    var response = result;
+                    if (JSON.stringify(response) != "") {
+                        var resultObject = result;
+                        $('#masterTaskCount').html(resultObject[0].Item_Name);
+                        $('#masterNBCount').html(resultObject[2].Item_Name);
+                        $('#masterMsgCount').html(resultObject[3].Item_Name);
+                        $('#mtCount_2').html(resultObject[0].Item_Name);
+                        $('#mtCount_32').html(resultObject[1].Item_Name);
+                    }
+                },
+                failure: function (data) { }
+            });
+        }
+
+        function MasterClearControls() {
+            <%=StartPageScript%>
+
+            return false;
+        }
+
+        var mainMstLoading, ex1MstLoading, ex2MstLoading, schMstLoading, subMstLoading;
+
+        function InitiateMstLoadingVars() {
+            ex1MstLoading = false;
+            ex2MstLoading = false;
+            schMstLoading = false;
+            subMstLoading = false;
+            mainMstLoading = true;
+            onPleaseWait();
+        }
+
+        function LoadMasterWorkflows() {
+            InitiateMstLoadingVars();
+
+            $('#<%=hndMasterWorkflowID.ClientID%>').val('0');
+
+            $('#MasterWorkflowList').empty();
+            $('#MasterSchedulesList').empty();
+            $('#MasterExSelection1').empty();
+            $('#MasterExSelection2').empty();
+            $('#MasterEl2List').empty();
+            $('#MasterSubordinatesList').empty();
+            $('#MasterSubordinatesList').append(
+                $('<option>', {
+                    value: '0',
+                    text: '[Myself]'
+                }, '<option/>')
+            );
+            $('#MasterSubordinatesList').val('0');
+            SaveMasterSubordinate();
+
+            $.ajax({
+                type: "GET",
+                url: "api/tasks/GetWorkflowsTaskStart",
+                data: { Workflow_Category_ID: $('#<%=cboMasterWorkflowCategory.ClientID%>').val() },
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: LoadMasterWorkflowsPassed,
+                failure: MasterWebMethodFailed
+            });
+        }
+
+        function LoadMasterWorkflowsPassed(result) {
+            var masterResultObject = result;
+            for (var i = 0; i < masterResultObject.length; i++) {
+                $('#MasterWorkflowList').append(
+                    $('<option>', {
+                        value: masterResultObject[i].Walkflow_ID.trim() + "|" + masterResultObject[i].Schedule_ID.trim() + "|" + masterResultObject[i].Number_Of_Days + "|" + masterResultObject[i].Exrta_Field_Naming.trim() + "|" + masterResultObject[i].Exrta_Field2_Naming.trim() + "|" + masterResultObject[i].Deadline_Type.trim() + "|" + masterResultObject[i].Extra_Field_Selection.trim() + "|" + masterResultObject[i].Extra_Field2_Selection.trim() + "|" + masterResultObject[i].Allow_Assigning_For_Subordinates.trim(),
+                        text: masterResultObject[i].Workflow_Name.trim()
+                    }, '<option/>')
+                );
+            }
+            SaveMasterWorkflowLine();
+        }
+
+        function SaveMasterWorkflowLine() {
+            InitiateMstLoadingVars();
+
+            $('#MasterSchedulesList').empty();
+            $('#MasterExSelection1').empty();
+            $('#MasterExSelection2').empty();
+            $('#MasterEl2List').empty();
+            $('#MasterSubordinatesList').empty();
+            $('#MasterSubordinatesList').append(
+                $('<option>', {
+                    value: '0',
+                    text: '[Myself]'
+                }, '<option/>')
+            );
+            $('#MasterSubordinatesList').val('0');
+            SaveMasterSubordinate();
+
+            if ($('#MasterWorkflowList option').length > 0) {
+                $('#<%=hndMasterWorkflowID.ClientID%>').val($('#MasterWorkflowList').val());
+            }
+            CheckMasterWFElements();
+        }
+
+        function closeMstLoading() {
+            if (mainMstLoading == false && ex1MstLoading == false && ex2MstLoading == false && schMstLoading == false && subMstLoading == false) {
+                offPleaseWait();
+            }
+        }
+
+        function CheckMasterWFElements() {
+            $('#<%=hndMasterEL2.ClientID%>').val('0');
+            $('#<%=hndMasterScheduleElementID.ClientID%>').val('0');
+
+            $('#<%=txtMasterExtraField1.ClientID%>').val('');
+            $('#<%=txtMasterExtraField2.ClientID%>').val('');
+
+            $('#lblMasterExtraField1').html('');
+            $('#lblMasterExtraField2').html('');
+            $('#divMasterExtraField1').addClass("hide");
+            $('#divMasterExtraField2').addClass("hide");
+            $('#<%=txtMasterExtraField1.ClientID%>').addClass("hide");
+            $('#<%=txtMasterExtraField2.ClientID%>').addClass("hide");
+            $('#MasterExSelection1').addClass("hide");
+            $('#MasterExSelection2').addClass("hide");
+
+            $('#divMasterSchedule').addClass("hide");
+            $('#divMasterAssignTo').addClass("hide");
+            $('#divMasterDueDate').removeClass("hide");
+            $('#<%=hndMasterDeadlineType.ClientID%>').val('1');
+            $('#divMasterDueTime').removeClass("hide");
+
+            $('#<%=txtMasterDueDate.ClientID%>').prop("disabled", false);
+            $('#<%=cboMasterDueTime.ClientID%>').prop("disabled", false);
+
+            $('#<%=txtMasterDueDate.ClientID%>').val($('#MasterWorkflowList').val().split('|')[5].split('-')[0]);
+            $('#<%=cboMasterDueTime.ClientID%>').val($('#MasterWorkflowList').val().split('|')[5].split('-')[1]);
+
+            if ($('#MasterWorkflowList option').length > 0) {
+                if ($('#MasterWorkflowList').val().split('|')[3].trim() != '') {
+                    LoadMasterEx1Selection();
+                }
+
+                if ($('#MasterWorkflowList').val().split('|')[4].trim() != '') {
+                    LoadMasterEx2Selection();
+                }
+
+                if ($('#MasterWorkflowList').val().split('|')[1].trim() != '0') {
+                    CheckMasterSchedules();
+                }
+                else if ($('#MasterWorkflowList').val().split('|')[2].trim() != '0') {
+                    $('#<%=txtMasterDueDate.ClientID%>').prop("disabled", true);
+                    $('#<%=cboMasterDueTime.ClientID%>').prop("disabled", true);
+                    $('#<%=hndMasterDeadlineType.ClientID%>').val('3');
+                }
+
+                if ($('#MasterWorkflowList').val().split('|')[8].trim() == '1') {
+                    LoadGetMasterSubordinateUsers();
+                }
+
+                LoadMasterWFUserCompanies();
+            }
+            else {
+                mainMstLoading = false;
+                closeMstLoading();
+            }
+            AdjustPopupSize(80, 600, 'at_model_start_task');
+        }
+
+        function LoadMasterWFUserCompanies() {
+            $.ajax({
+                type: "GET",
+                url: "api/tasks/GetEL2ForUserWF",
+                data: { Workflow_ID: $('#MasterWorkflowList').val().split('|')[0] },
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: LoadMasterWFUserCompaniesPassed,
+                failure: MasterWebMethodFailed
+            });
+        }
+
+        function LoadMasterWFUserCompaniesPassed(result) {
+            var masterResultObject = result;
+            for (var i = 0; i < masterResultObject.length; i++) {
+                $('#MasterEl2List').append(
+                    $('<option>', {
+                        value: masterResultObject[i].Entity_L2_ID,
+                        text: masterResultObject[i].Display_Name.trim()
+                    }, '<option/>'))
+            }
+            SaveMasterEL2();
+        }
+
+        function SaveMasterEL2() {
+            if ($('#MasterEl2List option').length > 0) {
+                $('#<%=hndMasterEL2.ClientID%>').val($('#MasterEl2List').val());
+            }
+            mainMstLoading = false;
+            closeMstLoading();
+        }
+
+        function LoadMasterEx1Selection() {
+            ex1MstLoading = true;
+            $('#divMasterExtraField1').removeClass("hide");
+            $('#lblMasterExtraField1').html($('#MasterWorkflowList').val().split('|')[3].trim());
+            if ($('#MasterWorkflowList').val().split('|')[6].trim() == '1') {
+                $('#MasterExSelection1').removeClass("hide");
+                $.ajax({
+                    type: "GET",
+                    url: "api/tasks/GetEx1Data",
+                    data: { Workflow_ID: $('#MasterWorkflowList').val().split('|')[0] },
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: LoadMasterEx1SelectionPassed,
+                    failure: MasterWebMethodFailed
+                });
+            }
+            else {
+                $('#<%=txtMasterExtraField1.ClientID%>').removeClass("hide");
+                SaveMasterExtraField1();
+            }
+        }
+
+        function LoadMasterEx1SelectionPassed(result) {
+            var masterResultObject = result;
+            if (masterResultObject.length > 0) {
+                for (var i = 0; i < masterResultObject.length; i++) {
+                    $('#MasterExSelection1').append(
+                        $('<option>', {
+                            value: masterResultObject[i].Item_Name.trim(),
+                            text: masterResultObject[i].Item_Name.trim()
+                        }, '<option/>'))
+                }
+            }
+            SaveMasterExtraField1();
+        }
+
+        function SaveMasterExtraField1() {
+            $('#<%=txtMasterExtraField1.ClientID%>').val($('#MasterExSelection1').val());
+            ex1MstLoading = false;
+            closeMstLoading();
+        }
+
+        function LoadMasterEx2Selection() {
+            ex2MstLoading = true;
+            $('#divMasterExtraField2').removeClass("hide");
+            $('#lblMasterExtraField2').html($('#MasterWorkflowList').val().split('|')[4].trim());
+            if ($('#MasterWorkflowList').val().split('|')[7].trim() == '1') {
+                $('#MasterExSelection2').removeClass("hide");
+                $.ajax({
+                    type: "GET",
+                    url: "api/tasks/GetEx2Data",
+                    data: { Workflow_ID: $('#MasterWorkflowList').val().split('|')[0] },
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: LoadMasterEx2SelectionPassed,
+                    failure: MasterWebMethodFailed
+                });
+            }
+            else {
+                $('#<%=txtMasterExtraField2.ClientID%>').removeClass("hide");
+                SaveMasterExtraField2();
+            }
+        }
+
+        function LoadMasterEx2SelectionPassed(result) {
+            var masterResultObject = result;
+            if (masterResultObject.length > 0) {
+                for (var i = 0; i < masterResultObject.length; i++) {
+                    $('#MasterExSelection2').append(
+                        $('<option>', {
+                            value: masterResultObject[i].Item_Name.trim(),
+                            text: masterResultObject[i].Item_Name.trim()
+                        }, '<option/>'))
+                }
+            }
+            SaveMasterExtraField2();
+        }
+
+        function SaveMasterExtraField2() {
+            $('#<%=txtMasterExtraField2.ClientID%>').val($('#MasterExSelection2').val());
+            ex2MstLoading = false;
+            closeMstLoading();
+        }
+
+        function CheckMasterSchedules() {
+            schMstLoading = true;
+            $('#divMasterSchedule').removeClass("hide");
+            $('#divMasterDueDate').addClass("hide");
+            $('#<%=hndMasterDeadlineType.ClientID%>').val('2');
+            $('#divMasterDueTime').addClass("hide");
+            $.ajax({
+                type: "GET",
+                url: "api/tasks/GetScheduleData",
+                data: { Schedule_ID: $('#MasterWorkflowList').val().split('|')[1] },
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: CheckMasterSchedulesPassed,
+                failure: MasterWebMethodFailed
+            });
+        }
+
+        function CheckMasterSchedulesPassed(result) {
+            var masterResultObject = result;
+            $('#MasterScheduleName').text(masterResultObject[0].Schedule_Entity_Name);
+            var masterResultObjectSub = masterResultObject[0].Schedule_Data;
+            if (masterResultObjectSub.length > 0) {
+                for (var i = 0; i < masterResultObjectSub.length; i++) {
+                    $('#MasterSchedulesList').append(
+                        $('<option>', {
+                            value: masterResultObjectSub[i].Schedule_Line_ID.trim(),
+                            text: masterResultObjectSub[i].Entity_Data.trim()
+                        }, '<option/>'));
+                }
+            }
+            else {
+                $('#MasterSchedulesList').append(
+                    $('<option>', {
+                        value: '0',
+                        text: '[Not Available]'
+                    }, '<option/>'));
+            }
+            SaveMasterScheduleLine();
+        }
+
+        function SaveMasterScheduleLine() {
+            if ($('#MasterSchedulesList option').length > 0) {
+                $('#<%=hndMasterScheduleElementID.ClientID%>').val($('#MasterSchedulesList').val());
+            }
+            schMstLoading = false;
+            closeMstLoading();
+        }
+
+        function LoadGetMasterSubordinateUsers() {
+            subMstLoading = true;
+            $('#divMasterAssignTo').removeClass("hide");
+            $.ajax({
+                type: "GET",
+                url: "api/tasks/GetSubordinateUsers",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: LoadGetMasterSubordinateUsersPassed,
+                failure: MasterWebMethodFailed
+            });
+        }
+
+        function LoadGetMasterSubordinateUsersPassed(result) {
+            var masterResultObject = result;
+            if (masterResultObject.length > 0) {
+                for (var i = 0; i < masterResultObject.length; i++) {
+                    $('#MasterSubordinatesList').append(
+                        $('<option>', {
+                            value: masterResultObject[i].User_ID.trim(),
+                            text: masterResultObject[i].Full_Name.trim()
+                        }, '<option/>'));
+                }
+            }
+            SaveMasterSubordinate();
+        }
+
+        function SaveMasterSubordinate() {
+            $('#<%=hndMasterSubordinateID.ClientID%>').val($('#MasterSubordinatesList').val());
+            subMstLoading = false;
+            closeMstLoading();
+        }
+
+        function MasterWebMethodFailed(result) { }
+
+        $('#divSearch').keypress(function (e) {
+            if (e.keyCode == '13') {
+                $('#<%=cmdSearch.ClientID%>').click();
+            }
+        });
+
+        function hourlylogout() {
+            $.ajax({
+                type: "GET",
+                url: "api/tasks/CheckLoginTime",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.trim() != "") {
+                        $('#<%=lblmesage.ClientID%>').text(result);
+                        $find("mpuAutoLogout").show();
+                    }
+                },
+                failure: function (data) {
+                }
+            });
+        }
+
+        function noLogout() {
+            $.ajax({
+                type: "GET",
+                url: "api/tasks/StayOnline",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.trim() != "") {
+                        $find("mpuAutoLogout").hide();
+                        $('#<%=lblmesage.ClientID%>').text("");
+                    }
+                },
+                failure: function (data) {
+                }
+            });
+        }
+
+        function DisplayNotifications() {
+            $.ajax({
+                type: "GET",
+                url: "api/tasks/GetNotifications",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (JSON.stringify(result) != "") {
+                        var masterResultObject = result;
+                        for (var i = 0; i < masterResultObject.length; i++) {
+                            ShowWarning(masterResultObject[i].Task_Number + ' - ' + masterResultObject[i].Workflow_Name + '<br>Current Status : ' + masterResultObject[i].Step_Status + '<br>Edited Date/Time :  ' + masterResultObject[i].Posted_Date + ' by ' + masterResultObject[i].Edited_User);
+                            PlaySound();
+                        }
+                    }
+                },
+                failure: function (data) {
+                    ShowError('Notification Center is not Responding, Please restart the Application.');
+                }
+            });
+        }
+
+        function PlaySound() {
+            document.getElementById('alert_sound').play();
+        }
+
+        function PauseAll() {
+            $find('mpuPauseAll').show();
+
+            $("#pauseCount").html("");
+            $("#<%=cmdPauseAll.ClientID%>").prop('disabled', true);
+            $("#<%=cmdPauseAll.ClientID%>").addClass('hide');
+            $("#<%=cmdCancelPauseAll.ClientID%>").val('OK');
+            $("#noPauseCount").addClass("hide");
+
+            $.ajax({
+                type: "GET",
+                url: "api/tasks/getPauseCount",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    var response = result.trim();
+                    if (response != "") {
+                        if (response != "0") {
+                            $("#pauseCount").html(response + " ");
+                            $("#<%=cmdPauseAll.ClientID%>").prop('disabled', false);
+                            $("#<%=cmdPauseAll.ClientID%>").removeClass('hide');
+                            $("#<%=cmdCancelPauseAll.ClientID%>").val('No');
+                            $("#noPauseCount").removeClass("hide");
+                        }
+                        else {
+                            $("#pauseCount").html("No ");
+                        }
+                    }
+                    else {
+                        $find('mpuPauseAll').hide();
+                    }
+                },
+                failure: function (data) { }
+            });
+            return false;
+        }
+
+        function doPauseAll() {
+            $find('mpuPauseAll').hide();
+            $.ajax({
+                type: "GET",
+                url: "api/tasks/PauseAll",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    var response = result;
+                    if (response == "Paused") {
+                        ShowSuccess('All Opened Tasks Successfully Paused');
+                    }
+                    else {
+                        ShowError('All Opened Tasks could not be Paused, Please try again later');
+                    }
+                },
+                failure: function (data) { }
+            });
+            return false;
+        }
+
+        function OpenWelcome() {
+            openPage('welcome.aspx?');
+            return false;
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="contScripts" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

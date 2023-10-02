@@ -1,0 +1,612 @@
+05/05/2021 07:42 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 672
+05/05/2021 10:46 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 672
+05/05/2021 10:47 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 672
+05/05/2021 03:44 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 671
+07/05/2021 11:18 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 669
+07/05/2021 11:22 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 667
+07/05/2021 06:17 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 673
+08/05/2021 01:51 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 671
+14/05/2021 10:48 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 694
+14/05/2021 11:06 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 694
+14/05/2021 11:56 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 694
+14/05/2021 12:25 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 694
+14/05/2021 01:07 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 694
+15/05/2021 10:05 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 695
+11/06/2021 10:53 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 699
+11/06/2021 06:39 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 699
+11/06/2021 07:39 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 699
+15/06/2021 09:10 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 938
+21/06/2021 06:06 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 1126
+11/07/2021 11:10 : There was no endpoint listening at http://pdcdarqn1.massap.corp.pri/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 1126
+22/07/2021 09:38 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 1224
+23/07/2021 12:37 : There was no endpoint listening at http://pdcdarapp6.massap.corp.pri:8000/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 1224
+27/07/2021 12:34 : There was no endpoint listening at http://pdcdarqn1.massap.corp.pri/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 1753
+13/01/2022 10:46 : There was no endpoint listening at http://pdcdarqn1.massap.corp.pri/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 1752
+13/01/2022 12:47 : There was no endpoint listening at http://pdcdarqn1.massap.corp.pri/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 1752
+13/01/2022 12:51 : There was no endpoint listening at http://pdcdarqn1.massap.corp.pri/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 1752
+13/01/2022 01:01 : There was no endpoint listening at http://pdcdarqn1.massap.corp.pri/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 1772
+13/01/2022 01:06 : There was no endpoint listening at http://pdcdarqn1.massap.corp.pri/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 1782
+13/01/2022 01:31 : There was no endpoint listening at http://pdcdarqn1.massap.corp.pri/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 1789
+13/01/2022 01:51 : There was no endpoint listening at http://pdcdarqn1.massap.corp.pri/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 1789
+17/02/2022 10:48 : There was no endpoint listening at http://pdcdarqn1.massap.corp.pri/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 1798
+17/02/2022 12:33 : There was no endpoint listening at http://pdcdarqn1.massap.corp.pri/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 1798
+27/02/2022 07:23 : There was no endpoint listening at http://pdcdarqn1.massap.corp.pri/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 1936
+28/02/2022 08:36 : There was no endpoint listening at http://pdcdarqn1.massap.corp.pri/sap/bc/srt/scs/sap/zsrv_sbu_colcodes?sap-client=300 that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. - 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request)
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODES.ZsbuColCodeGet(ZsbuColCodeGetRequest request) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 264
+   at N_Ter_Task_Custom.Lyndex_Get_Color.ZSRV_SBU_COLCODESClient.ZsbuColCodeGet(ZsbuColCodeGet ZsbuColCodeGet1) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Connected Services\Lyndex_Get_Color\Reference.cs:line 270
+   at N_Ter.SQL_Server.Customizable.Client_New_Balance.CallColorFetch(String[] Args, String PhysicalRootFolder) in C:\Development\Projects\N_Ter_Tasks\Versions_for_Clients\Azure_Authentication\N_Ter_Tasks_MAS\N_Ter_Task_Data\N_Ter_Task_Custom\Data\SQL_Server\Clients\Client_New_Balance.cs:line 1936

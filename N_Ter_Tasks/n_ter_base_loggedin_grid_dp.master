@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/n_ter_base_loggedin_grid.master" AutoEventWireup="true" CodeBehind="n_ter_base_loggedin_grid_dp.master.cs" Inherits="N_Ter_Tasks.n_ter_base_loggedin_grid_dp" %>
+
+<%@ Register TagPrefix="asp" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="contTitle" Runat="Server">
+    <asp:ContentPlaceHolder ID="contTitle" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contCSS" Runat="Server">
+    <asp:ContentPlaceHolder ID="contCSS" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contHeader" Runat="Server">
+    <asp:ContentPlaceHolder ID="contHeader" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="contBody" Runat="Server">
+    <div style="margin: -18px -20px; min-height: 400px">
+        <div style="padding: 18px 20px 18px 20px; background-color: #f6f6f6">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="w100">
+                        <tr>
+                            <td>
+                                <div class="btn-group w100">
+                                    <button type="button" class="btn btn-primary dropdown-toggle text-left w100" data-toggle="dropdown">
+                                        Document Repo :
+                                    <asp:Literal ID="ltrSelectedRepo" runat="server"></asp:Literal>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down pull-right pt3"></i></button>
+                                    <ul class="dropdown-menu dropdown-menu-right w100">
+                                        <asp:Literal ID="ltrOtherRepos" runat="server"></asp:Literal>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="wf_options">
+                                <asp:Literal ID="ltrActionMenu" runat="server"></asp:Literal>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div style="margin: 18px 20px">
+            <asp:ContentPlaceHolder ID="contBody" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="contScripts" Runat="Server">
+    <asp:ContentPlaceHolder ID="contScripts" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

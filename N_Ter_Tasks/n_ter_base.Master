@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="n_ter_base.master.cs" Inherits="N_Ter_Tasks.n_ter_base" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 gt-ie8"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" class="gt-ie8 gt-ie9 not-ie">
+<!--<![endif]-->
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <link rel="icon" href="assets/images/fav.png" />
+    <title>
+        <asp:ContentPlaceHolder ID="contTitle" runat="server"></asp:ContentPlaceHolder>
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin" rel="stylesheet" type="text/css" />
+    <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/stylesheets/nter_tasks.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/stylesheets/rtl.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/stylesheets/themes.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/stylesheets/custom.min.css" rel="stylesheet" />
+    <link href="assets_customizable/stylesheets/customizable.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="contCSS" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body class="<%=ThemeName%> <%=PageClass%> main-navbar-fixed main-menu-fixed styled-bar">
+    <div id="divLoading" class="loading_bg">
+        <div class="loading_box">
+            <div class="panel loading_box_inner">
+                <div class="panel-body p20">
+                    <img src="assets/images/nter_loading.gif" />
+                    <div class="pull-right">
+                        <h5>Loading Content...</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt30 ml5 text-center">
+            <img src="assets/images/NKAR-Logo-big.png" />
+        </div>
+        <div class="loading_box_left">
+            <h5>t: +94 77 7664 840</h5>
+        </div>
+        <div class="loading_box_right">
+            <h5>e: contact@nter.online</h5>
+        </div>
+    </div>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ScriptManager>
+        <script>var init = [];</script>
+        <asp:ContentPlaceHolder ID="contBody" runat="server"></asp:ContentPlaceHolder>
+        <asp:HiddenField ID="hndPleaseWait" runat="server" />
+        <asp:ModalPopupExtender ID="hndPleaseWait_ModalPopupExtender" runat="server" Enabled="True" BehaviorID="mpuPleaseWait" PopupControlID="pnlPleaseWait" TargetControlID="hndPleaseWait" BackgroundCssClass="at_modelpopup_background_3">
+        </asp:ModalPopupExtender>
+        <asp:Panel ID="pnlPleaseWait" runat="server" CssClass="at_modelpopup_container" Style="display: none">
+            <div id="at_wait_model_indent" class="at_modelpopup_indent">
+                <div id="at_wait_model_inner_indent" class="panel panel-inverse at_modelpopup_inner_indent">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Please Wait</h4>
+                    </div>
+                    <div id="at_wait_model_content" class="at_modelpopup_content styled-bar">
+                        <div class="panel-body">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="assets/images/nter_loading.gif" />
+                                    </td>
+                                    <td style="padding-left: 20px">Checking Data...
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </asp:Panel>
+        <div id="help_panel" runat="server">
+            <a href="#" id="help_panel_toggler" class="fa fa-question"></a>
+            <h5 class="header">HELP</h5>
+            <div id="helpcontent" class="help_content">
+                <asp:Literal ID="ltrHelp" runat="server"></asp:Literal>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var growl_dur = <%=Growl_Duration%>;
+            var nter_dateformat = '<%=Date_Format_Java%>';
+        </script>
+        <script src="assets/javascripts/jquery.min.js"></script>
+        <script src="assets/javascripts/bootstrap.min.js"></script>
+        <script src="assets/javascripts/nter_tasks.min.js"></script>
+        <script src="assets/javascripts/all_pages.min.js"></script>
+        <script src="assets/javascripts/app_scripts/validations.min.js"></script>
+        <script src="assets_customizable/javascripts/customizable.js"></script>
+        <%=Extra_JS%>
+        <asp:ContentPlaceHolder ID="contScripts" runat="server"></asp:ContentPlaceHolder>
+        <script type="text/javascript">
+            window.nter.start(init);
+        </script>
+    </form>
+</body>
+</html>
+
